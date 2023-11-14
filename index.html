@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GitFav</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon" />
+    <script src="js/main.js" type="module" defer></script>
+
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        
+        <img src="./assets/Gitfav.svg" alt="Estrela">
+        
+        <div class="search">
+          <label class="sr-only" for="input-search">GitFav</label>
+
+          <input 
+          id="input-search" 
+          type="text" 
+          placeholder="Digite o Github username que quer favoritar">
+
+          <button id="btn-search">
+            <img src="./assets/star.png" alt="estrela">Favoritar
+          </button>
+        </div>
+        
+      </header>
+          
+            <div class="thead">
+              <div>Usuário</div>
+              <div>Repositórios</div>
+              <div>Seguidores</div>
+              <div>Ação</div>
+            </div>
+
+      <main>
+
+            <table>
+                <div class="noFav hide">
+                        <img src="./assets/favicon.svg" alt="">
+                        <h2>Não existe favoritos</h2>
+                </div>
+
+                <tbody class="mainTbody"></tbody>
+            </table>                       
+          
+      </main>
+
+      <footer>
+        <p>Created by 
+            <a
+              href="https://github.com/caetanosbr"
+              target="_blank"
+              rel="link"
+              > Caetanosbr
+            </a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,408 @@
+* {
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  transform: translate(-50%, -50%);
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+} 
+::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 5rem ;
+}
+
+:root {
+    font-size: 62.5%;
+    line-height: 160%;
+
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-secundary: "Roboto Mono", monospace;
+    
+    --natu-color:#ffffff;
+    --text-color:#e1e1e6;
+    --text-color3:#7c7c8a;
+    --revo-color:#f75a68;
+
+    --base-color:#000000;
+    --base-color2:#092D38;
+    --border-color:#4A808C;
+    --border-color1:#06181C;
+    --button-color:#065E7C;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--natu-color);
+  background-color:var(--base-color);
+  font-family: var(--ff-primary);
+}
+
+main {
+  box-shadow: -2px 15px 2rem 0px rgb(0 0 0 / 50%);
+  border: .1rem solid var(--border-color);
+  overflow:auto;
+  height: 41.4rem;
+}
+
+#app {
+  max-width: 112rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7rem  0 0 5rem;
+}
+
+header img {
+  width: 18.6rem;
+  height: 3.2rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  box-shadow: 0px 1px 2rem -1px rgb(0 0 0 / 50%);
+}
+
+.search input {
+  width: 46rem;
+  border: 1px solid var(--border-color1);
+  border-radius: 0.5rem;
+  padding: 0 1.6rem;
+  height: 4.8rem;
+  background: var(--border-color1);
+  color: var(--natu-color);
+
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--text-color3);
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--text-color3);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--text-color3);
+}
+
+.search button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .8rem;
+
+  background-color: var(--button-color);
+  color:var(--natu-color);
+
+  border: 0;
+  border-radius: .5rem;
+  width: 17rem;
+  height: 4.8rem;
+
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 290ms;
+}
+
+.search button:hover {
+  filter: brightness(1.5);
+}
+
+.search img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.noFav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  height: 41rem;
+  font-size: 4rem;
+  box-shadow: -2px 15px 2rem 0px rgb(0 0 0 / 50%);
+  font-family: var(--ff-secundary);
+  color: var(--text-color3);
+  background-color: var(--border-color1);
+}
+
+.noFav svg {
+  width: 200rem;
+  height: 200rem;
+}
+
+.noFav h2 {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 2.5rem;
+  color: #4E5455;
+}
+.hide {
+    display: none;
+}
+
+table * {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+table {
+  width: 100%;
+  border: 0 solid var(--border-color);
+  border-radius: 1.2rem 1.2rem 0 0;
+  border-collapse:collapse;
+  box-shadow: 0 1rem 2rem -1rem rgba(0,0,0,0.3);
+  background:var(--base-color2);
+  text-decoration: none;
+}
+
+.thead {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 3.2rem;
+  color: #E1E1E6;
+  background: #092D38;
+  text-align: start;
+  border-radius: 1.2rem 1.2rem 0 0;
+  margin-top: 8.7rem;
+  display: flex;
+  border: 1px solid #4A808C;
+}
+
+.thead div{
+  padding: 1.6rem 0 1.6rem 0;
+  text-align:start;
+}
+
+.thead div:nth-child(1) {
+    width: 50.4rem;
+    padding-left: 5rem;
+}
+.thead div:nth-child(2) {
+    width: 21.9rem;
+    padding-left: 5rem;
+}
+.thead div:nth-child(3) {
+    width: 21.9rem;
+}
+.thead div:nth-child(4) {
+    width: 17.8rem;
+    padding-left: 2rem;
+}
+
+table tr:nth-child(odd) {
+  background-color: #030b0d;
+}
+table tr:nth-child(even) {
+  background: #06181c;
+}
+table tr:nth-child(odd):hover {
+  background: #040f11;
+}
+table tr:nth-child(even):hover {
+  background: #030b0dc0;
+}
+
+table td {
+  padding: 1.8rem;
+  text-align: left;
+  text-transform: none;
+}
+
+tr + tr {
+  border: 1px solid var(--border-color);
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+}
+
+td.user a {
+   color: var(--text-color);
+   text-decoration: none;
+}
+
+td.user span {
+  font-weight: 400;
+}
+
+td.user p {
+   font-weight: bold;
+   color: var(--natu-color);
+}
+
+td.repositories,
+td.followers,
+td.action {
+  text-align:start;
+}
+
+tr th:nth-child(2),
+tr th:nth-child(3) {
+  text-align: center;
+}
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+tr .remove {
+  text-align:center;
+}
+
+.github-user {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.remove button {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 3.2rem;
+    color: #F75A68;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+  padding-top: 20rem;
+  display: grid;
+  justify-content: center;
+  text-shadow: #81d1c0 1px 0px 12px;
+  letter-spacing: 0ch;
+}
+
+footer a {
+  color: #5de7e7;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+   /* mobile*/
+
+@media (max-width:700px) {
+
+  #app {
+      width: 39.9rem;
+    }
+
+  header {
+      flex-direction: column;
+      padding: 2rem 0 0 0;
+    }
+
+    header img {
+      width: 15rem;
+      height: 3rem;
+    }
+
+    .search {
+      flex-direction: column;
+    }
+
+    .search input {
+      width: 42rem;
+      margin-top: 5rem;
+      padding: 0 5rem 0 5rem;
+      height: 5rem;
+    }
+
+    .search button {
+      justify-content: center;
+      margin-top: .2rem;
+      width: 14rem;
+      height: 4rem;
+    }
+
+    .input-wrapper {
+        margin-top: 5rem;
+    }
+
+    .thead {
+      font-weight: 400;
+      font-size: 1.6rem;
+      gap: .5rem;
+    }
+
+    .thead div:nth-child(1) {
+        padding: 1.4rem 0 1.4rem 3rem;
+      }
+    .thead div:nth-child(2) {
+        padding: 1.4rem 0 1.4rem 2rem;
+      }
+    .thead div:nth-child(3) {
+        padding: 1.4rem 1rem 1.4rem 1rem;
+      }
+    .thead div:nth-child(4) {
+        padding: 1.4rem 1rem 1.4rem 0;
+      }
+
+    td.user,
+    td.repositories,
+    td.followers,
+    td.action {
+        font-size: 1.6rem;
+      }
+    
+    td.user {
+        padding:.8rem 0 .8rem 0;
+      }
+    td.repositories {
+        padding-left:1rem;
+      }
+
+    td.user img {
+        width: 3rem;
+        height: 3rem;
+      }
+
+    .remove button {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 3rem;
+      }
+
+    footer {
+        padding: 1rem;
+      }
+}
