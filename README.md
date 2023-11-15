@@ -32,5 +32,3 @@ GivFav busca usuários do GitHub por API e mostra no seu favoritos. Projeto dese
 ---
 
  By Thiago Caetano :wave: [LinkedIn]() e [GitHub](https://github.com/caetanosbr)
-
- Deploy: [Projeto Pronto](https://caetanosbr.github.io/GitFav/)
